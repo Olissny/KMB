@@ -1,0 +1,277 @@
+:root {
+  --maroon: #6D1919;
+  --bg-color-dark: #292828;
+  --beige:#F0e7da;  
+}
+html {
+  height: 100%;
+  width: 100%;
+  background-color: var(--maroon);
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+img {
+  margin-bottom: 10px;
+  margin-top: 20px;
+  width: 130px;
+  margin-left: 50px;
+}
+
+.dark-mode {
+  background-color: var(--maroon);
+}
+
+.dark-mode .background {
+  background-color: var(--bg-color-dark);
+}
+
+#toggle {
+  position: relative;
+  left:80px;
+} 
+
+.slider-icon {
+  transform: rotate(250deg);
+  position: absolute;
+  right: 3px;
+  top: 5px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 47px;
+  height: 28px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #a86b6b;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.slider:hover {
+  box-shadow: 0 0 15px #b17272;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--maroon);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 15px #b17272;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#userInput {
+  width: 35%;
+  border: none;
+  background-color: var(--bg-color-dark);
+  padding: 8px;
+  font-weight: bolder;   
+  border-radius: 15px;
+  font-size: 14px;
+  color: white;  
+}
+
+.dark-mode #userInput{
+  border: 2px solid rgba(187, 135, 135, 0.93); 
+}
+
+#userInput:focus-visible {
+  outline: none;
+  box-shadow: rgba(187, 135, 135, 0.93) 2.8px 2.8px 3px;
+  
+}
+
+#submitBtn {
+  background-color: var(--maroon);
+  padding: 8px;  
+  border-radius: 15px;
+  font-size: 14px;
+  color: white;  
+  margin: 4px;
+  margin-left: 10px;
+  box-shadow: rgba(187, 135, 135, 0.93) 1.95px 1.95px 2.6px;
+}
+
+#submitBtn:hover{
+  background-color: #ad5858da;
+}
+
+#bound {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  flex-wrap: wrap;
+  background-color: none;   
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bolder;
+  color: var(--maroon);  
+  margin: 4px;
+  margin-top: 5px !important;
+  
+}
+.dark-mode #bound {
+  color: white;
+}
+
+.search-container {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+ 
+}
+
+
+#route-container {
+  display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.boundBtn {
+  background-color: #a86b6b;
+  margin: 5px;
+  border-radius: 20px;
+  padding: 6px;
+  color: white;
+  font-weight: lighter; 
+  box-shadow: rgba(187, 135, 135, 0.93) 1.95px 1.95px 2.6px;
+}
+.boundBtn:hover{
+  background-color: #aa6a6aaa;
+}
+
+.boundBtn.selected {
+  background-color: var(--maroon); 
+  color: #fff; 
+  padding: 10px;
+  
+}
+
+.selectedStopBtn {
+  background-color: var(--maroon);
+  border-radius: 15px;
+  color: white;
+  padding: 6px;
+  box-shadow: rgba(187, 135, 135, 0.93) 1.95px 1.95px 2.6px;
+  
+}
+
+.stopEtaContainer {
+  margin: 10px;
+}
+
+
+
+.routeList {
+  width: 30%;
+  background-color: #ad58586e;
+  margin: 5px;
+  border-radius:15px;
+  color: white;
+  font-weight: bold; 
+}
+.routeList li {
+  color: var(--maroon);
+  margin: 5px;
+  border-radius: 10px;
+  padding: 4px;
+  font-weight: bold; 
+  font-size: 16px;
+}
+.dark-mode .routeList li {
+  color: rgb(235, 224, 224);
+  font-weight: lighter;
+}
+
+.routeList li:nth-child(even) {
+  background-color: #f0f8ff; 
+}
+.routeList li:nth-child(odd) {
+  background-color: var(--beige); 
+}
+
+.routeList li:nth-child(odd):hover,
+.routeList li:nth-child(even):hover {
+  background-color: #ad58583a;
+}
+
+.dark-mode .routeList li:nth-child(even) {
+  background-color: #3d3c3c ;
+}
+.dark-mode .routeList li:nth-child(odd) {
+  background-color: #4d4444 ;
+}
+
+.dark-mode .routeList li:nth-child(odd):hover,
+.dark-mode .routeList li:nth-child(even):hover {
+  background-color: #615e5a;
+}
+
+.contentContainer {
+  padding: 20px;
+  color: var(--maroon);
+  font-size: 16px;
+}
+
+#loading,
+#error {
+    display: none;   
+}
+#loading {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
