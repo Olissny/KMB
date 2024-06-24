@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 showError(err);
             }
         } else {
-            showError(`請輸入正確巴士路線！`);
+            alert('請輸入正確路線');
         }
     }
 });
