@@ -138,7 +138,8 @@ async function renderRouteList(routeDataArr, routeBound) {
         const stopName = results.data.name_tc;
         const li = document.createElement('li');
         const stopBtn = document.createElement('button');
-        stopBtn.textContent = `${routeDataArr[i].seq}    ${stopName}`;
+        stopBtn.textContent = `${routeDataArr[i].seq.toString().padStart(2, '0')}    ${stopName}`;
+        
         stopBtn.classList.add('stopBtn');
         stopBtn.addEventListener('click', async () => {
             showLoading();
